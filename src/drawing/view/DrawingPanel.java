@@ -23,6 +23,7 @@ public class DrawingPanel extends JPanel
 	private JButton addCircleButton;
 	private JButton addTriangleButton;
 	private JButton addPolygonButton;
+	private JButton adddClearButton;
 	private ArrayList<Rectangle> rectangleList;
 	
 	
@@ -32,7 +33,8 @@ public class DrawingPanel extends JPanel
 	  {
 		  addRectangleButton.addActionListener(new ActionListener()
 		  {
-			  public void actionPerformed(ActionEvent click)
+			  public 
+			  void actionPerformed(ActionEvent click)
 			  {
 				  int xPosition = (int)(Math.random()* 600);
 				  int yPosition = (int)(Math.random()* 600);

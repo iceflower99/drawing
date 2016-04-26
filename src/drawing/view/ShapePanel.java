@@ -49,6 +49,12 @@ public class ShapePanel extends JPanel
 	public void addTriangle()
 	{
 		
+		int [] xPoints = new int[3];
+		int [] yPoints = new int[3];
+		xPoints[0]= (int)(Math.random()*250);
+	    
+		xPoints =new int []{(int)(Math.random()* 250), (int)(Math.random) 
+		
 	}
 	
 	public void addPolygon()
