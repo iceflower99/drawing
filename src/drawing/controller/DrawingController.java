@@ -4,11 +4,11 @@ import drawing.view.*;
 
 public class DrawingController
 {
-	private drawingView myView;
+	private DrawingFrame myFrame;
 	
 	public DrawingController()
 	{
-	private myView=new drawingView;
+	  myFrame =new DrawingFrame();
 	}
 	
 	public void start()
