@@ -17,7 +17,12 @@ public class DrawingPanel extends JPanel
 	private DrawingController baseController;
 	private SpringLayout baseLayout;
 	private ShapePanel shapePanel;
-	private JButton drawRectangleButton;
+	private JButton addRectangleButton;
+	private JButton addSquareButton;
+	private JButton addEllipseButton;
+	private JButton addCircleButton;
+	private JButton addTriangleButton;
+	private JButton addPolygonButton;
 	private ArrayList<Rectangle> rectangleList;
 	
 	
@@ -25,7 +30,7 @@ public class DrawingPanel extends JPanel
 	   
 	  private void setupListeners()
 	  {
-		  drawRectangleButton.addActionListener(new ActionListener()
+		  addRectangleButton.addActionListener(new ActionListener()
 		  {
 			  public void actionPerformed(ActionEvent click)
 			  {
@@ -41,7 +46,18 @@ public class DrawingPanel extends JPanel
 		  
 	  }
 	 
-		   
+		  private void setupPanel()
+		  {
+			  this.setLayout(baseLayout);
+			  this.setBackground(Color.DARK_GRAY);
+			  this.add(addRectangleButton);
+			  this.add(addSquareButton);
+			  this.add(addEllipseButton);
+			  this.add(addCircleButton);
+			  this.add(addTriangleButton);
+			  this.add(addPolygonButton);
+			  this.add(shapePanel);
+		  }
 	
 	protected void paintCompnent(Graphics currentGraphics)
 	{

@@ -41,7 +41,9 @@ public class ShapePanel extends JPanel
 	
 	public void addCircle()
 	{
-		
+		int xPoint = (int)(Math.random()* 1000);
+		int yPoint = (int)(Math.random()* 1000);
+		int diameter = (int)(Math.random()* 1000);
 	}
 	
 	public void addTriangle()
