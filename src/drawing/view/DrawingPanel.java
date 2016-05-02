@@ -26,7 +26,11 @@ public class DrawingPanel extends JPanel
 	private JButton adddClearButton;
 	private ArrayList<Rectangle> rectangleList;
 	
-	
+	public DrawingPanel(DrawingController baseController)
+	{
+		setupPanel();
+		setupListeners();
+	}
 	 
 	   
 	  private void setupListeners()

@@ -8,7 +8,7 @@ public class DrawingController
 	
 	public DrawingController()
 	{
-	  myFrame =new DrawingFrame();
+	  myFrame =new DrawingFrame(this);
 	}
 	
 	public void start()

@@ -27,11 +27,12 @@ public class ShapePanel extends JPanel
 	public void addRectangle()
 	{
 		int xPosition = (int)(Math.random()*1500);
-		int yPosition = (int)(Math.random()*1000);
-		int width = (int)(Math.random()*2000);
+		int yPosition = (int)(Math.random()*2000);
+		int width = (int)(Math.random()*1000);
 		int height = width;
 
-		Rectangle2D currentSquare = new  Rectangle2D.Double(xPosition,yPosition,width,height);
+		Rectangle current = new Rectangle(xPosition,yPosition,width,height);
+		rectangleList.add(current);
 	}
 	
 	public void addSquare()
@@ -39,9 +40,10 @@ public class ShapePanel extends JPanel
 		int xPosition = (int)(Math.random()*1500);
 		int yPosition = (int)(Math.random()*1000);
 		int width = (int)(Math.random()*2000);
-		int height = width;
+		
 
-		Rectangle2D currentSquare = new  Rectangle2D.Double(xPosition,yPosition,width,height);
+		Rectangle current = new Rectangle(xPosition,yPosition,width,width);
+		squareList.add(current);
 	}
 	
 	public void addEllipse()
