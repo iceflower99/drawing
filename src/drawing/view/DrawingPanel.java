@@ -23,11 +23,20 @@ public class DrawingPanel extends JPanel
 	private JButton addCircleButton;
 	private JButton addTriangleButton;
 	private JButton addPolygonButton;
-	private JButton adddClearButton;
+	private JButton addClearButton;
 	private ArrayList<Rectangle> rectangleList;
 	
 	public DrawingPanel(DrawingController baseController)
 	{
+		baseLayout = new SpringLayout();
+		shapePanel = new ShapePanel();
+		addRectangleButton=new JButton();
+		addSquareButton = new JButton();
+		addEllipseButton=new JButton();
+		addCircleButton=new JButton();
+		addTriangleButton=new JButton();
+		addPolygonButton=new JButton();
+		addClearButton=new JButton();
 		setupPanel();
 		setupListeners();
 	}
