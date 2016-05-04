@@ -56,12 +56,54 @@ public class DrawingPanel extends JPanel
 			  public 
 			  void actionPerformed(ActionEvent click)
 			  {
-				  int xPosition = (int)(Math.random()* 600);
-				  int yPosition = (int)(Math.random()* 600);
-				  int width = (int)(Math.random()*50);
-				  int height = (int)(Math.random()*50);
-				  
-				  rectangleList.add(new Rectangle(xPosition,yPosition,width,height));
+				  shapePanel.addRectangle();
+				  repaint();
+			  }
+		  });
+		  addSquareButton.addActionListener(new ActionListener()
+		  {
+			  public 
+			  void actionPerformed(ActionEvent click)
+			  {
+				  shapePanel.addSquare();
+				  repaint();
+			  }
+		  });
+		  
+		  addEllipseButton.addActionListener(new ActionListener()
+		  {
+			  public 
+			  void actionPerformed(ActionEvent click)
+			  {
+				  shapePanel.addEllipse();
+				  repaint();
+			  }
+		  });
+		  
+		  addCircleButton.addActionListener(new ActionListener()
+		  {
+			  public 
+			  void actionPerformed(ActionEvent click)
+			  {
+				  shapePanel.addCircle();
+				  repaint();
+			  }
+		  });
+		  addPolygonButton.addActionListener(new ActionListener()
+		  {
+			  public 
+			  void actionPerformed(ActionEvent click)
+			  {
+				  shapePanel.addPolygon();
+				  repaint();
+			  }
+		  });
+		  addCircleButton.addActionListener(new ActionListener()
+		  {
+			  public 
+			  void actionPerformed(ActionEvent click)
+			  {
+				  shapePanel.addCircle();
 				  repaint();
 			  }
 		  });
