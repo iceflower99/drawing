@@ -30,23 +30,28 @@ public class DrawingPanel extends JPanel
 	{
 		baseLayout = new SpringLayout();
 		shapePanel = new ShapePanel();
-		baseLayout.putConstraint(SpringLayout.NORTH, shapePanel, 20, SpringLayout.NORTH, this);
-		baseLayout.putConstraint(SpringLayout.WEST, shapePanel, 20, SpringLayout.WEST, this);
-		baseLayout.putConstraint(SpringLayout.SOUTH, shapePanel, 200, SpringLayout.NORTH, this);
-		baseLayout.putConstraint(SpringLayout.EAST, shapePanel, -20, SpringLayout.EAST, this);
 		addSquareButton = new JButton();
 		addEllipseButton=new JButton();
-		baseLayout.putConstraint(SpringLayout.WEST, addSquareButton, 6, SpringLayout.EAST, addEllipseButton);
 		addCircleButton=new JButton();
-		baseLayout.putConstraint(SpringLayout.WEST, addCircleButton, 6, SpringLayout.EAST, addSquareButton);
 		addTriangleButton=new JButton();
-		baseLayout.putConstraint(SpringLayout.EAST, addTriangleButton, -10, SpringLayout.EAST, this);
 		addPolygonButton=new JButton();
 		addClearButton=new JButton();
 		rectangleList=new ArrayList<Rectangle>();
 		setupPanel();
+		setupLayout();
 		setupListeners();
 	}
+	 private void setupLayout() 
+	 {
+		 baseLayout.putConstraint(SpringLayout.NORTH, shapePanel, 20, SpringLayout.NORTH, this);
+			baseLayout.putConstraint(SpringLayout.WEST, shapePanel, 20, SpringLayout.WEST, this);
+			baseLayout.putConstraint(SpringLayout.SOUTH, shapePanel, 200, SpringLayout.NORTH, this);
+			baseLayout.putConstraint(SpringLayout.EAST, shapePanel, -20, SpringLayout.EAST, this);
+			baseLayout.putConstraint(SpringLayout.WEST, addSquareButton, 6, SpringLayout.EAST, addEllipseButton);
+			baseLayout.putConstraint(SpringLayout.WEST, addCircleButton, 6, SpringLayout.EAST, addSquareButton);
+			baseLayout.putConstraint(SpringLayout.EAST, addTriangleButton, -10, SpringLayout.EAST, this);
+			
+	 }
 	 
 	   
 	  private void setupListeners()
