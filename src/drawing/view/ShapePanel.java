@@ -95,7 +95,7 @@ public class ShapePanel extends JPanel
 		
 	}
 	
-	protected void paintComponet(Graphics currentGraphics)
+	protected void paintComponent(Graphics currentGraphics)
 	{
 		super.paintComponent(currentGraphics);
 		Graphics2D mainGraphics = (Graphics2D) currentGraphics;
