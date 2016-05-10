@@ -31,7 +31,7 @@ public class GraphPanel extends JPanel
 			int xPosition= 0;
 			int yPosition = height * index;
 			
-			int red 
+			int red = (int)(Math.random()*256);
 		}
 	}
 
