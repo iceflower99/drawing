@@ -26,10 +26,10 @@ public class ShapePanel extends JPanel
 	
 	public void addRectangle()
 	{
-		int xPosition = (int)(Math.random()*1500);
-		int yPosition = (int)(Math.random()*2000);
-		int width = (int)(Math.random()*1000);
-		int height = width;
+		int xPosition = (int)(Math.random()*200);
+		int yPosition = (int)(Math.random()*200);
+		int width = (int)(Math.random()*100);
+		int height = (int)(Math.random()*100);
 
 		Rectangle current = new Rectangle(xPosition,yPosition,width,height);
 		rectangleList.add(current);
@@ -37,9 +37,9 @@ public class ShapePanel extends JPanel
 	
 	public void addSquare()
 	{
-		int xPosition = (int)(Math.random()*1500);
-		int yPosition = (int)(Math.random()*1000);
-		int width = (int)(Math.random()*2000);
+		int xPosition = (int)(Math.random()*150);
+		int yPosition = (int)(Math.random()*100);
+		int width = (int)(Math.random()*200);
 		
 
 		Rectangle current = new Rectangle(xPosition,yPosition,width,width);
@@ -48,19 +48,23 @@ public class ShapePanel extends JPanel
 	
 	public void addEllipse()
 	{
-		int xPosition = (int)(Math.random()*1500);
-		int yPosition = (int)(Math.random()*1000);
-		int width = (int)(Math.random()*2000);
-		int height = (int)(Math.random()* 1000);
+		int xPosition = (int)(Math.random()*150);
+		int yPosition = (int)(Math.random()*100);
+		int width = (int)(Math.random()*200);
+		int height = (int)(Math.random()* 100);
 		
 		Ellipse2D currentEllipse = new Ellipse2D.Double(xPosition,yPosition,width,height);
+		ellipseList.add(currentEllipse);
 	}
 	
 	public void addCircle()
 	{
-		int xPoint = (int)(Math.random()* 1000);
-		int yPoint = (int)(Math.random()* 1000);
-		int diameter = (int)(Math.random()* 1000);
+		int xPoint = (int)(Math.random()* 100);
+		int yPoint = (int)(Math.random()* 100);
+		int diameter = (int)(Math.random()* 100);
+		
+		Ellipse2D currentCircle = new Ellipse2D.Double(xPoint,yPoint,diameter,diameter);
+		circleList.add(currentCircle);
 	}
 	
 	public void addTriangle()
@@ -68,10 +72,10 @@ public class ShapePanel extends JPanel
 		
 		int [] xPoints = new int[3];
 		int [] yPoints = new int[3];
-		xPoints[0]= (int)(Math.random()*250);
+	
 	    
-		xPoints = new int []{(int)(Math.random()* 250), (int)(Math.random()*250), (int)(Math.random()*250)}; 
-		yPoints = new int []{(int)(Math.random()* 250), (int)(Math.random()*250), (int)(Math.random()*250)};
+		xPoints = new int []{(int)(Math.random()* 10), (int)(Math.random()*10), (int)(Math.random()*10)}; 
+		yPoints = new int []{(int)(Math.random()* 10), (int)(Math.random()*10), (int)(Math.random()*10)};
 		
 		Polygon triangle = new Polygon(xPoints, yPoints,3);
 		
