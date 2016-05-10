@@ -19,7 +19,7 @@ public class GraphPanel extends JPanel
 		this.setBackground(Color.LIGHT_GRAY);
 	}
 	
-	protected void paintComponet(Graphics currentGraphics)
+	protected void paintComponent(Graphics currentGraphics)
 	{
 		super.paintComponent(currentGraphics);
 		

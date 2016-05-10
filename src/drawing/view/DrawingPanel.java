@@ -17,6 +17,7 @@ public class DrawingPanel extends JPanel
 	private DrawingController baseController;
 	private SpringLayout baseLayout;
 	private ShapePanel shapePanel;
+	private GraphPanel graphPanel;
 	private JButton addRectangleButton;
 	private JButton addSquareButton;
 	private JButton addEllipseButton;
@@ -30,6 +31,11 @@ public class DrawingPanel extends JPanel
 	{
 		baseLayout = new SpringLayout();
 		shapePanel = new ShapePanel();
+		graphPanel = new GraphPanel();
+		baseLayout.putConstraint(SpringLayout.NORTH, graphPanel, 36, SpringLayout.SOUTH, shapePanel);
+		baseLayout.putConstraint(SpringLayout.WEST, graphPanel, 0, SpringLayout.WEST, shapePanel);
+		baseLayout.putConstraint(SpringLayout.SOUTH, graphPanel, 257, SpringLayout.SOUTH, shapePanel);
+		baseLayout.putConstraint(SpringLayout.EAST, graphPanel, -12, SpringLayout.EAST, shapePanel);
 		addSquareButton = new JButton();
 		addSquareButton.setText("Square");
 		addEllipseButton=new JButton();
@@ -142,6 +148,7 @@ public class DrawingPanel extends JPanel
 			  this.add(addTriangleButton);
 			  this.add(addPolygonButton);
 			  this.add(shapePanel);
+			  this.add(graphPanel);
 		  }
 	
 	protected void paintCompnent(Graphics currentGraphics)
