@@ -32,6 +32,13 @@ public class GraphPanel extends JPanel
 			int yPosition = height * index;
 			
 			int red = (int)(Math.random()*256);
+			int blue = (int)(Math.random()*256);
+			int green = (int)(Math.random()*256);
+			int alpha = (int)(Math.random()*255);
+			
+			mainGraphics.setColor(new Color(red,green,blue,alpha));
+			
+			mainGraphics.fill(new Rectangle(xPosition,yPosition,width,height));
 		}
 	}
 
